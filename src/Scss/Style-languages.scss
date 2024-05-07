@@ -1,0 +1,156 @@
+.Video {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-left: 10%;
+}
+
+
+.big-video {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+
+
+}
+
+.little-video {
+    background-color: white;
+    width: 50%;
+    padding: 15px;
+    margin-right: auto;
+    height: 45vh;
+    border-radius: 15px;
+
+}
+
+.video5 {
+    width: 100%;
+    min-height: 50vh;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+
+}
+
+.video-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10%;
+    margin-bottom: 5%;
+    padding: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(58, 163, 135);
+
+}
+
+.video-item:hover {
+    background-color: #8eb5f3;
+}
+
+.video-item.active {
+    background-color: #3e78d5;
+}
+
+
+.button-new-style {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    flex-direction: column;
+    margin-left: auto;
+    margin-left: 7%;
+    margin-right: auto;
+    margin-top: 20%;
+}
+
+.language-font {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.text {
+    width: 80%;
+    margin-left: 5%;
+}
+
+.height110 {
+    height: 110vh;
+}
+
+$speed: 0.5s;
+
+.btn-flip {
+    opacity: 1;
+    outline: 0;
+    color: #fff;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    margin-left: -70%;
+    position: absolute;
+
+    &:hover {
+
+        &:after {
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+
+        &:before {
+            opacity: 0;
+            transform: translateY(50%) rotateX(90deg);
+        }
+    }
+
+    &:after {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        color: #323237;
+        display: block;
+        transition: $speed;
+        position: absolute;
+        background: #adadaf;
+        content: attr(data-back);
+        transform: translateY(-50%) rotateX(90deg);
+    }
+
+    &:before {
+        top: 0;
+        left: 0;
+        opacity: 1;
+        color: #adadaf;
+        display: block;
+        padding: 0 30px;
+        line-height: 40px;
+        transition: $speed;
+        position: relative;
+        background: #323237;
+        content: attr(data-front);
+        transform: translateY(0) rotateX(0);
+    }
+}
+
+.flex {
+    display: flex;
+    margin-bottom: 2%;
+    justify-content: center;
+    align-items: center;
+
+}
